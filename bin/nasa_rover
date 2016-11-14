@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "nasa_rover"
+
+
+
+plateau = gets.chomp.split(" ")
+
+@plateau = NasaRover::Plateau.new(*plateau)
+@control = NasaRover::Control.new()
+
+loop do 
+	rover_position = gets.chomp.split(" ")
+	commands = gets.chomp
+	@current_rover = NasaRover::Rover.new(@plateau,*rover_position )
+	commands.chars.each do |command|
+		@current_rover.position =  @control.execute!(command,@current_rover.position.clone)
+	end
+	puts @current_rover.position.to_s
+end
+
+
