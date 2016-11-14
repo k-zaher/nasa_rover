@@ -30,6 +30,7 @@ And then execute:
 LMLMLMLMM
 
 3 3 E
+
 MMRMMRMRRM
 
 ## Test Output:
