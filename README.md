@@ -1,5 +1,7 @@
 # NasaRover
 
+[![Coverage Status](https://coveralls.io/repos/github/kimooz/nasa_rover/badge.svg?branch=master)](https://coveralls.io/github/kimooz/nasa_rover?branch=master)
+
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. 
 
 This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
