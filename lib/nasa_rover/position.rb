@@ -1,12 +1,14 @@
-class NasaRover::Position
-  attr_accessor :x, :y,:orientation
+module NasaRover
+  # Position Class
+  class Position
+    attr_accessor :x, :y, :orientation
 
-	def initialize(x,y,orientation= nil)
-		@x,@y,@orientation = x.to_i,y.to_i,orientation
-	end
+    def initialize(*coordinates)
+      @x, @y, @orientation = coordinates
+    end
 
-	def to_s
-		"#{@x} #{@y} #{@orientation}"
-	end
-
+    def to_text
+      "#{@x} #{@y} #{@orientation}"
+    end
+  end
 end
