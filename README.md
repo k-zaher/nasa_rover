@@ -1,39 +1,49 @@
 # NasaRover
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nasa_rover`. To experiment with that code, run `bin/console` for an interactive prompt.
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars. 
 
-TODO: Delete this and the text above, and describe your gem
+This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
-## Installation
+A rover's position and location is represented by a combination of x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
 
-Add this line to your application's Gemfile:
+In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot. 'M' means move forward one grid point, and maintain the same heading.
 
-```ruby
-gem 'nasa_rover'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install nasa_rover
+Assume that the square directly North from (x, y) is (x, y+1).
 
 ## Usage
 
-TODO: Write usage instructions here
+Clone the project and run the following command
 
-## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    $ git clone https://github.com/kimooz/nasa_rover.git
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-## Contributing
+And then execute:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nasa_rover. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+    $ ./bin/nasa_rover
 
+## Test Input:
+5 5
+
+1 2 N
+
+LMLMLMLMM
+
+3 3 E
+
+MMRMMRMRRM
+
+## Test Output:
+
+1 3 N
+
+5 1 E
+
+## rspec
+
+run the test by
+
+    $ rspec
 
 ## License
 
