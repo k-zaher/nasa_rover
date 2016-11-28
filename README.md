@@ -1,6 +1,7 @@
 # NasaRover
 
 [![Coverage Status](https://coveralls.io/repos/github/kimooz/nasa_rover/badge.svg?branch=master)](https://coveralls.io/github/kimooz/nasa_rover?branch=master)
+[![Build Status](https://travis-ci.org/kimooz/nasa_rover.svg?branch=master)](https://travis-ci.org/kimooz/nasa_rover)
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. 
 
